@@ -6,8 +6,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Website{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'style_1.css'%}">
+    <title>{% block title %}{% endblock %}</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'style_1.css'%}"> {% endcomment %}
+     <!-- Block to allow app-specific CSS -->
+    {% block extra_css %}{% endblock %}
 </head>
 <body>
     {% block content %}
