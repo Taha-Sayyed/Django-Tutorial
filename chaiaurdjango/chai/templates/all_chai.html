@@ -11,4 +11,13 @@
 
 {% block content %}
 <h1>Welcome to Chai Page</h1>
+
+{% for chai in chais %}
+  <div class="chai-item">
+    <img src="{{ chai.image.url }}" alt="{{ chai.name }}">
+    <h3>{{ chai.name }}</h3>
+  </div>
+{% endfor %}
+
+
 {% endblock %}

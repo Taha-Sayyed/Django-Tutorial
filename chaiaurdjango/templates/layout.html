@@ -1,4 +1,6 @@
 {%load static%}
+{% load static tailwind_tags %}
+
 
 
 <!DOCTYPE html>
@@ -10,6 +12,8 @@
     {% comment %} <link rel="stylesheet" href="{% static 'style_1.css'%}"> {% endcomment %}
      <!-- Block to allow app-specific CSS -->
     {% block extra_css %}{% endblock %}
+    {% tailwind_css %}
+
 </head>
 <body>
     {% block content %}
